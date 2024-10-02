@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: mlproject
+Version: 0.0.1
+Author: Shubham Mishra
+Author-email: mshubham.mishra18@gmail.com, shubhuu1804@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
