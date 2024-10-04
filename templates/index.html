@@ -1,1 +1,185 @@
-<h1>Welcome to the Home Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='predictdata.css') }}">
+    <title>Student Exam Performance Analyzer</title>
+    <style>
+        /* Resetting some default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ensure padding and borders don't affect width */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full height for footer positioning */
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e0f7fa; /* Light blue background */
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%; /* Occupy only 60% of the screen width */
+            max-width: 1200px; /* Max width for larger screens */
+        }
+
+        .hero h1 {
+            font-size: 24px; /* Increased size for better visibility */
+            margin: 0; /* Remove margin */
+            color: #005662; /* Darker shade for contrast */
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            max-width: 150px; /* Set a max-width for better appearance */
+            text-align: center; /* Center text inside button */
+        }
+
+        .features {
+            padding: 20px;
+            margin: 20px auto; /* Center the features box */
+            width: 60%; /* Match width with hero section */
+            max-width: 1200px; /* Max width for larger screens */
+            background-color: #ffffff; /* White background for features box */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            flex-grow: 1; /* Allow this section to grow and push footer down */
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Gap between grid items */
+            align-items: start; /* Align items to the start for better spacing */
+        }
+
+        .feature-item {
+            background-color: #f1f8e9; /* Light green background for features */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            display: flex; /* Flex for internal alignment */
+            flex-direction: column; /* Stack internal elements vertically */
+            justify-content: flex-start; /* Align items to the start */
+        }
+
+        .features h2 {
+            margin-bottom: 10px; /* Add spacing between heading and paragraph */
+            font-size: 28px; /* Font size for the main heading */
+            color: #005662; /* Darker shade for contrast */
+            text-align: center; /* Center the heading */
+        }
+
+        .features p {
+            margin-bottom: 20px; /* Spacing below the paragraph */
+            font-size: 16px; /* Font size for the paragraph */
+            color: #333; /* Dark gray color for better readability */
+            text-align: center; /* Center the paragraph */
+        }
+
+        .features ul {
+            padding-left: 20px; /* Add padding to the list */
+        }
+
+        .features li {
+            margin-bottom: 10px; /* Space between list items */
+        }
+
+        footer {
+            text-align: center; /* Center footer content */
+            padding: 10px;
+            background-color: #e0f7fa; /* Match footer with hero */
+            width: 100%; /* Full width */
+            position: relative; /* Ensure the footer stays at the bottom */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                align-items: center; /* Center items */
+            }
+
+            .btn {
+                width: 100%; /* Make button full width on small screens */
+                margin-top: 10px; /* Add margin for spacing */
+            }
+
+            .features {
+                width: 90%; /* Increase width on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <h1>Welcome to the Student Exam Performance Analyzer</h1>
+        <a href="{{ url_for('predict_datapoint') }}" class="btn">Start Predicting</a>
+    </header>
+
+    <section class="features">
+        <h2>Features of Our Prediction System</h2>
+        <p>Predict student performance in mathematics based on various factors.</p>
+
+        <div class="feature-item">
+            <h3>Comprehensive Data Inputs</h3>
+            <p>Analyze various factors like gender, ethnicity, lunch type, and parental education to gain insights into student performance.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Multiple Models</h3>
+            <p>Utilizes advanced regression models including Decision Trees, Random Forest, Gradient Boosting, and more for accurate predictions.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>User-Friendly Interface</h3>
+            <p>Easy-to-use web application designed for intuitive user experience, making it accessible for everyone.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Real-time Predictions</h3>
+            <p>Get instant feedback on predicted math scores based on your input data, enhancing the decision-making process.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Data-Driven Insights</h3>
+            <p>Helps identify areas for improvement in student performance, guiding educators and parents in supporting their students effectively.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Secure Data Handling</h3>
+            <p>Ensures that all student data is handled securely and complies with privacy regulations.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Customizable Parameters</h3>
+            <p>Allows users to customize input parameters based on their specific needs, providing tailored predictions.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Progress Tracking</h3>
+            <p>Offers a feature to track student performance over time, helping to visualize trends and improvements.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Student Exam Performance Analyzer. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

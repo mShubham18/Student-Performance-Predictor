@@ -1,0 +1,38 @@
+[2024-10-04 22:16:27,570] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+[2024-10-04 22:16:27,570] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-10-04 22:16:29,651] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:16:29] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:18:53,476] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:18:53] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:19:55,213] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:19:55] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:19:58,232] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:19:58] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:20:25,027] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:20:25] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:20:30,775] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:20:30] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:20:54,518] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:20:54] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:20:57,578] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:20:57] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:21:20,934] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:21:20] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:21:23,319] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:21:23] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:24:13,020] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:24:13] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:24:42,981] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:24:42] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:24:48,787] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:24:48] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:25:56,551] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:25:56] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:25:58,562] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:25:58] "POST /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:00,806] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:00] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:03,422] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:03] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:52,513] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:52] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:54,042] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:54] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:54,213] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:54] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:54,375] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:54] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:54,528] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:54] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:54,675] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:54] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:54,840] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:54] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:55,000] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:55] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:26:55,158] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:26:55] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:29:23,711] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:29:23] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:29:24,977] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:29:24] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:29:25,127] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:29:25] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:29:25,292] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:29:25] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:29:25,446] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:29:25] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:29:25,595] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:29:25] "GET /predictdata HTTP/1.1" 200 -
+[2024-10-04 22:29:25,752] 97 werkzeug - INFO - 127.0.0.1 - - [04/Oct/2024 22:29:25] "GET /predictdata HTTP/1.1" 200 -
