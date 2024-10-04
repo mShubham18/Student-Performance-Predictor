@@ -1,0 +1,3 @@
+[2024-10-04 21:59:49,561] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-10-04 21:59:49,567] 97 werkzeug - INFO -  * Debugger PIN: 388-796-269
+[2024-10-04 21:59:54,975] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\Victus\\Documents\\GitHub\\ML-Project-Sub\\app.py', reloading
