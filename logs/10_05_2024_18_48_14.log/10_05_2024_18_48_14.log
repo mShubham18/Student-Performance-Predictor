@@ -1,0 +1,10 @@
+[2024-10-05 18:48:15,936] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+[2024-10-05 18:48:15,936] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-10-05 18:48:22,971] 97 werkzeug - INFO - 127.0.0.1 - - [05/Oct/2024 18:48:22] "[36mGET /static/predictdata.css HTTP/1.1[0m" 304 -
+[2024-10-05 18:48:24,970] 97 werkzeug - INFO - 127.0.0.1 - - [05/Oct/2024 18:48:24] "GET /predict HTTP/1.1" 200 -
+[2024-10-05 18:48:24,981] 97 werkzeug - INFO - 127.0.0.1 - - [05/Oct/2024 18:48:24] "[36mGET /static/predictdata.css HTTP/1.1[0m" 304 -
+[2024-10-05 18:48:34,469] 97 werkzeug - INFO - 127.0.0.1 - - [05/Oct/2024 18:48:34] "POST /predict HTTP/1.1" 200 -
+[2024-10-05 18:48:34,489] 97 werkzeug - INFO - 127.0.0.1 - - [05/Oct/2024 18:48:34] "[36mGET /static/predictdata.css HTTP/1.1[0m" 304 -

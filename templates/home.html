@@ -105,7 +105,7 @@
         </form>
         <div id="result">
             {% if results %}
-                <h2>The student's Math score prediction is : {{ results }}</h2>
+                <h2>The student's Math score prediction is: {{ results }}</h2>
             {% endif %}
         </div>
     </div>
@@ -114,16 +114,5 @@
         <p>Discover how our student performance predictor can help you.</p>
         <a href="{{ url_for('index') }}" class="btn">Know More</a>
     </div>
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            this.submit();
-            setTimeout(function() {
-                if (document.getElementById('result').innerHTML.trim() !== "") {
-                    document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
-                }
-            }, 500); 
-        });
-    </script>
 </body>
 </html>
