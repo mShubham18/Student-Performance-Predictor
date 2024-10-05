@@ -1,4 +1,8 @@
-/* predictdata.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f4f8;
@@ -6,68 +10,122 @@ body {
     margin: 0;
     padding: 20px;
 }
-
 .login {
+    width: 100%;
     max-width: 600px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-
 h1 {
     text-align: center;
     color: #2c3e50;
+    font-size: 1.9em;
 }
-
 form {
     margin-top: 20px;
 }
-
 .form-label {
     font-weight: bold;
     margin-bottom: 5px;
 }
-
 .mb-3 {
     margin-bottom: 15px;
 }
-
 .form-control {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-top: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
-
 select.form-control, input.form-control {
-    height: 40px;
+    height: 45px;
     background-color: #f9f9f9;
 }
-
 select.form-control:focus, input.form-control:focus {
     border-color: #3498db;
     outline: none;
 }
-
 .btn {
-    background-color: #3498db;
+    background-color: #226770;
     color: #fff;
-    padding: 10px 15px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
-
 .btn:hover {
-    background-color: #2980b9;
+    background-color: #2e8692;
 }
-
 h2 {
     text-align: center;
     margin-top: 20px;
-    color: #16a085;
+    color: #226770;
+    font-size: 1.5em;
+}
+.hero {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    text-align: center;
+}
+.hero h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.hero .btn {
+    margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+    .login {
+        max-width: 90%;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 1.6em;
+    }
+    .form-control {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .btn {
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+    .hero {
+        padding: 15px;
+    }
+    .hero h2 {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .login {
+        max-width: 100%;
+        padding: 20px;
+        margin: 10px auto;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    .form-control {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
 }

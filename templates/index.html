@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='predictdata.css') }}">
-    <title>Student Exam Performance Analyzer</title>
+    <title>Student Exam Performance Predictor</title>
     <style>
-        /* Resetting some default margins and padding */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Ensure padding and borders don't affect width */
+            box-sizing: border-box;
         }
 
         body {
@@ -19,108 +18,138 @@
             background-color: #f9f9f9;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Full height for footer positioning */
+            min-height: 100vh;
         }
 
         .hero {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #e0f7fa; /* Light blue background */
+            background-color: #e0f7fa;
             border-radius: 15px;
             padding: 20px;
             margin: 20px auto;
-            width: 60%; /* Occupy only 60% of the screen width */
-            max-width: 1200px; /* Max width for larger screens */
+            width: 60%;
+            max-width: 1200px;
         }
 
         .hero h1 {
-            font-size: 24px; /* Increased size for better visibility */
-            margin: 0; /* Remove margin */
-            color: #005662; /* Darker shade for contrast */
+            font-size: 24px;
+            margin: 0;
+            color: #005662;
         }
 
         .btn {
             padding: 10px 20px;
-            background-color: #007bff; /* Bootstrap primary color */
+            background-color: #226770;
             color: white;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             font-size: 16px;
-            max-width: 150px; /* Set a max-width for better appearance */
-            text-align: center; /* Center text inside button */
+            max-width: 150px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #2e8692;
         }
 
         .features {
             padding: 20px;
-            margin: 20px auto; /* Center the features box */
-            width: 60%; /* Match width with hero section */
-            max-width: 1200px; /* Max width for larger screens */
-            background-color: #ffffff; /* White background for features box */
+            margin: 20px auto;
+            width: 60%;
+            max-width: 1200px;
+            background-color: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-            flex-grow: 1; /* Allow this section to grow and push footer down */
-            display: grid; /* Use grid layout */
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-            gap: 20px; /* Gap between grid items */
-            align-items: start; /* Align items to the start for better spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .features-header {
+            grid-column: span 2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .features-header h2 {
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: #005662;
+        }
+
+        .features-header p {
+            font-size: 16px;
+            color: #333;
         }
 
         .feature-item {
-            background-color: #f1f8e9; /* Light green background for features */
+            background-color: #e0f7fa;
             border-radius: 10px;
             padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-            display: flex; /* Flex for internal alignment */
-            flex-direction: column; /* Stack internal elements vertically */
-            justify-content: flex-start; /* Align items to the start */
-        }
-
-        .features h2 {
-            margin-bottom: 10px; /* Add spacing between heading and paragraph */
-            font-size: 28px; /* Font size for the main heading */
-            color: #005662; /* Darker shade for contrast */
-            text-align: center; /* Center the heading */
-        }
-
-        .features p {
-            margin-bottom: 20px; /* Spacing below the paragraph */
-            font-size: 16px; /* Font size for the paragraph */
-            color: #333; /* Dark gray color for better readability */
-            text-align: center; /* Center the paragraph */
-        }
-
-        .features ul {
-            padding-left: 20px; /* Add padding to the list */
-        }
-
-        .features li {
-            margin-bottom: 10px; /* Space between list items */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         footer {
-            text-align: center; /* Center footer content */
+            text-align: center;
             padding: 10px;
-            background-color: #e0f7fa; /* Match footer with hero */
-            width: 100%; /* Full width */
-            position: relative; /* Ensure the footer stays at the bottom */
+            background-color: #e0f7fa;
+            width: 100%;
+            position: relative;
         }
 
-        /* Media queries for responsiveness */
+        .model-description {
+            grid-column: span 2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #005662;
+        }
+
+        .model-item {
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
         @media (max-width: 768px) {
             .hero {
-                flex-direction: column; /* Stack items vertically on smaller screens */
-                align-items: center; /* Center items */
+                flex-direction: column;
+                align-items: center;
             }
 
             .btn {
-                width: 100%; /* Make button full width on small screens */
-                margin-top: 10px; /* Add margin for spacing */
+                width: 100%;
+                margin-top: 10px;
             }
 
             .features {
-                width: 90%; /* Increase width on smaller screens */
+                width: 90%;
+            }
+
+            .features-header {
+                grid-column: span 1;
+            }
+
+            .model-description {
+                grid-column: span 1;
+                margin: 20px 0; /* Add spacing on mobile */
+            }
+
+            .model-item {
+                margin: 10px 0; /* Add spacing between model items */
             }
         }
     </style>
@@ -133,8 +162,10 @@
     </header>
 
     <section class="features">
-        <h2>Features of Our Prediction System</h2>
-        <p>Predict student performance in mathematics based on various factors.</p>
+        <div class="features-header">
+            <h2>Features of Our Prediction System</h2>
+            <p>Predict student performance in mathematics based on various factors.</p>
+        </div>
 
         <div class="feature-item">
             <h3>Comprehensive Data Inputs</h3>
@@ -155,30 +186,37 @@
             <h3>Real-time Predictions</h3>
             <p>Get instant feedback on predicted math scores based on your input data, enhancing the decision-making process.</p>
         </div>
+    </section>
 
-        <div class="feature-item">
-            <h3>Data-Driven Insights</h3>
-            <p>Helps identify areas for improvement in student performance, guiding educators and parents in supporting their students effectively.</p>
+    <section class="features">
+        <div class="model-description">
+            <h2>About Models</h2>
+            <p>Explore the different models used in our prediction system for accurate analysis.</p>
         </div>
 
-        <div class="feature-item">
-            <h3>Secure Data Handling</h3>
-            <p>Ensures that all student data is handled securely and complies with privacy regulations.</p>
+        <div class="model-item">
+            <h3>Decision Trees</h3>
+            <p>Decision Trees are simple yet powerful models that split data into branches to make predictions based on feature values. They are easy to interpret and visualize.</p>
         </div>
 
-        <div class="feature-item">
-            <h3>Customizable Parameters</h3>
-            <p>Allows users to customize input parameters based on their specific needs, providing tailored predictions.</p>
+        <div class="model-item">
+            <h3>Random Forest</h3>
+            <p>This ensemble method combines multiple decision trees to improve prediction accuracy and reduce overfitting. It handles large datasets well and provides a robust solution.</p>
         </div>
 
-        <div class="feature-item">
-            <h3>Progress Tracking</h3>
-            <p>Offers a feature to track student performance over time, helping to visualize trends and improvements.</p>
+        <div class="model-item">
+            <h3>Gradient Boosting</h3>
+            <p>Gradient Boosting builds models sequentially, each new model correcting errors made by the previous ones. It's known for its high accuracy and is widely used in competitions.</p>
+        </div>
+
+        <div class="model-item">
+            <h3>Support Vector Machines</h3>
+            <p>Support Vector Machines (SVM) are supervised learning models used for classification and regression. They find the optimal hyperplane to separate different classes in the data.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Student Exam Performance Analyzer. All rights reserved.</p>
+        <p>&copy; 2024 Student Exam Performance Analyzer. Github : @mShubham18</p>
     </footer>
 </body>
 
