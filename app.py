@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, jsonify
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS, cross_origin  # Import CORS
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 import logging  # Import logging
 
@@ -13,10 +13,12 @@ app = application
 
 # Route for the homepage
 @app.route("/")
+@cross_origin()
 def index():
     return render_template("index.html")
 
 @app.route("/predict", methods=["GET", "POST"])  # Change to /predict
+@cross_origin()
 def predict_datapoint():
     if request.method == "GET":
         return render_template("home.html")
