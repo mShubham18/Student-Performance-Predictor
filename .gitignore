@@ -6,3 +6,5 @@ env.bak/
 venv.bak/
 venv/Lib/site-packages/catboost/_catboost.pyd
 venv/Lib/site-packages/xgboost/lib/xgboost.dll
+
+.vercel
