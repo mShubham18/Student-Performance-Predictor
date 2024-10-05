@@ -1,7 +1,7 @@
 #pandas
-pandas==2.2.3
+pandaS
 #numpy
-numpy==1.26.4
+numpy
 seaborn
 matplotlib
 scikit-learn
