@@ -1,5 +1,5 @@
 #pandas
-pandaS
+pandas
 #numpy
 numpy
 seaborn
